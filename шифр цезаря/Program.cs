@@ -18,15 +18,14 @@ namespace шифр_цезаря
             Console.WriteLine("Введите строку которую нужно зашифровать ");
             string a = Console.ReadLine();
             char[] arr = a.ToCharArray();
-            int d;
+       
             for (int i = 0; i < a.Length; i++)
             {
 
-                //arr[i] = (char)(arr[i] + 3);
-               // arr[i] = (char)arr[i];
+               
                 if ('a' <= arr[i] || arr[i] >= 'z')
                 {
-                    // arr[i] = (char)(arr[i] + 3);
+                    
                     if (arr[i]>'w')
                     {
                         if((char) arr[i] == 'x')
@@ -41,7 +40,7 @@ namespace шифр_цезаря
                         {
                            arr[i] = (char)('c' - 3);
                         }
-                        //arr[i] = (char) (arr[i] - 'z');
+                      
                     }
                     arr[i] = (char)(arr[i] + 3);
                 }
@@ -66,11 +65,13 @@ namespace шифр_цезаря
                     {
                         arr[i] = (char)('z' + 3);
                     }
-                    arr[i] = (char)(arr[i] - 3);
+                    arr[i] = (char)(arr[i] - 3);          
                 }
                 a = new string(arr);
             }
-            Console.WriteLine(a + " Дешифровка");
+            Console.WriteLine(a + " Дишифровка");       /*  можно было сделать и для руского алфавита алгоритм тот же получается*/
+            
+            // вера олеговна если есть вариант как проще направьте на мысль
 
         }
     }
